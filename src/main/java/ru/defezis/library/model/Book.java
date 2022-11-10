@@ -2,9 +2,8 @@ package ru.defezis.library.model;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class Book {
-    private final String description;
+    private String description;
 
     public Book() {
         description = "no description";
@@ -14,7 +13,20 @@ public class Book {
         this.description = description;
     }
 
-    public String info() {
+    @Override
+    public String toString() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int id() {
+        return Integer.parseInt(""+description.charAt(description.length()-1));
     }
 }

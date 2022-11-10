@@ -6,9 +6,7 @@
        http://www.springframework.org/schema/context
        https://www.springframework.org/schema/context/spring-context.xsd">
 
-<!--    <bean class="ru.defezis.library.model.SomeBean" id="someBean">-->
-<!--        <constructor-arg value="argument from xml"/>-->
-<!--    </bean>-->
-
-    <context:component-scan base-package="ru.defezis.library.model"/>
+    <context:component-scan base-package="ru.defezis.library.service"/>
+    <context:component-scan base-package="ru.defezis.library.repository.inmemory"/>
+    <context:component-scan base-package="ru.defezis.library.web"/>
 </beans>
